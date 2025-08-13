@@ -1,8 +1,17 @@
 package collectionsFramework;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class CollectionsFramework {
 	
@@ -77,6 +86,10 @@ public class CollectionsFramework {
 		// char ==> Character
 		// boolean ==> Boolean
 		
+//		Hash  ==> Random
+//		Linked ==> Link each other ==> Insertion Order
+//		Tree ==> Roots to Branches ==> Ascending (null)
+		
 		
 		/************************  ArrayList  *************************/
 		System.out.println("************************  ArrayList  *************************");			
@@ -131,6 +144,190 @@ public class CollectionsFramework {
 		System.out.println("Size of LinkedList: " + empNamesLinkedList.size()); // Getting the size of LinkedList
 		System.out.println("First element in LinkedList: " + empNamesLinkedList.get(0)); // Accessing the first element in LinkedList
 		System.out.println("All elements in LinkedList: " + empNamesLinkedList); // Printing all elements in LinkedList
+		
+		/************************  HashSet  *************************/
+		
+		System.out.println("************************  HashSet  *************************");			
+		
+		// Syntax to Initialize an HashSet:  Set<DataType> variable = new HashSet<DataType>();  
+		// Syntax to add data: variable.add(value);
+		// Syntax to remove data: variable.remove(value);
+		// Syntax to get size: variable.size();
+		
+		// HashSet follow random order
+		// HashSet won't allows duplicate values
+		// HashSet allows null values
+		
+		Set<String> empNamesHashSet = new HashSet<String>();
+		empNamesHashSet.add("Bharath");
+		empNamesHashSet.add("John");
+		empNamesHashSet.add("Sony");
+		empNamesHashSet.add("Bharath"); // Adding duplicate value
+		empNamesHashSet.add("Sarath");
+		empNamesHashSet.add(null); // Adding null value
+		empNamesHashSet.remove("John"); // Removing a value
+		
+		System.out.println("Size of HashSet: " + empNamesHashSet.size()); // Getting the size of HashSet
+		System.out.println("All elements in HashSet: " + empNamesHashSet); // Printing all elements in HashSet
+		
+		/************************  LinkedHashSet  *************************/
+		
+		System.out.println("************************  LinkedHashSet  *************************");			
+		
+		// Syntax to Initialize an LinkedHashSet:  Set<DataType> variable = new LinkedHashSet<DataType>();  
+		// Syntax to add data: variable.add(value);
+		// Syntax to remove data: variable.remove(value);
+		// Syntax to get size: variable.size();
+		
+		// LinkedHashSet follow Insertion order
+		// LinkedHashSet won't allows duplicate values
+		// LinkedHashSet allows null values
+		
+		Set<String> empNamesLinkedHashSet = new LinkedHashSet<String>();
+		empNamesLinkedHashSet.add("Bharath");
+		empNamesLinkedHashSet.add("John");
+		empNamesLinkedHashSet.add("Sony");
+		empNamesLinkedHashSet.add("Bharath"); // Adding duplicate value
+		empNamesLinkedHashSet.add("Sarath");
+		empNamesLinkedHashSet.add(null); // Adding null value
+		empNamesLinkedHashSet.remove("John"); // Removing a value
+		
+		System.out.println("Size of LinkedHashSet: " + empNamesLinkedHashSet.size()); // Getting the size of LinkedHashSet
+		System.out.println("All elements in LinkedHashSet: " + empNamesLinkedHashSet); // Printing all elements in LinkedHashSet
+		
+		/************************  TreeSet  *************************/
+		
+		System.out.println("************************  TreeSet  *************************");			
+		
+		// Syntax to Initialize an TreeSet:  Set<DataType> variable = new TreeSet<DataType>();  
+		// Syntax to add data: variable.add(value);
+		// Syntax to remove data: variable.remove(value);
+		// Syntax to get size: variable.size();
+		
+		// TreeSet follow Ascending order
+		// TreeSet won't allows duplicate values
+		// TreeSet won't allow null values
+		
+		Set<String> empNamesTreeSet = new TreeSet<String>();
+		empNamesTreeSet.add("Bharath");
+		empNamesTreeSet.add("John");
+		empNamesTreeSet.add("Sony");
+		empNamesTreeSet.add("Bharath"); // Adding duplicate value
+		empNamesTreeSet.add("Sarath");
+//		empNamesTreeSet.add(null); // Adding null value
+		empNamesTreeSet.remove("John"); // Removing a value
+		
+		System.out.println("Size of TreeSet: " + empNamesTreeSet.size()); // Getting the size of TreeSet
+		System.out.println("All elements in TreeSet: " + empNamesTreeSet); // Printing all elements in TreeSet
+		
+		
+		/************************  HashMap  *************************/
+		
+		System.out.println("************************  HashMap  *************************");			
+		
+		// Syntax to Initialize an HashMap:  Map<Key, Value> variable = new HashMap<Key, Value>();  
+		// Syntax to add data: variable.put(key,value);
+		// Syntax to remove data: variable.remove(key);
+		// Syntax to get data: variable.get(key);
+		// Syntax to get size: variable.size();
+		
+		// HashMap follow Random order of Keys
+		// HashMap won't allows duplicate Keys, but allows duplicate Values
+		// HashMap will allow null values and null keys
+		
+		HashMap<String, Integer> empNamesHashMap = new HashMap<String,Integer>();
+		empNamesHashMap.put("Bharath",1234);
+		empNamesHashMap.put("John",1234);// Adding duplicate value
+		empNamesHashMap.put("Sony",1236);
+		empNamesHashMap.put("Bharath",1237); // Adding duplicate key
+		empNamesHashMap.put("Sarath",1238);
+		empNamesHashMap.put("Tom",null); // Adding null value
+		empNamesHashMap.put(null,1239); // Adding null key
+		empNamesHashMap.remove("Sony"); // Removing a value
+		
+		System.out.println("Size of HashMap: " + empNamesHashMap.size()); // Getting the size of HashMap
+		System.out.println("All elements in HashMap: " + empNamesHashMap); // Printing all elements in HashMap
+		
+		/************************  LinkedHashMap  *************************/
+		
+		System.out.println("************************  LinkedHashMap  *************************");			
+		
+		// Syntax to Initialize an LinkedHashMap:  Map<Key, Value> variable = new LinkedHashMap<Key, Value>();  
+		// Syntax to add data: variable.put(key,value);
+		// Syntax to remove data: variable.remove(key);
+		// Syntax to get data: variable.get(key);
+		// Syntax to get size: variable.size();
+		
+		// LinkedHashMap follow Insertion order of Keys
+		// LinkedHashMap won't allows duplicate Keys, but allows duplicate Values
+		// LinkedHashMap will allow null values and null keys
+		
+		Map<String, Integer> empNamesLinkedHashMap = new LinkedHashMap<String,Integer>();
+		empNamesLinkedHashMap.put("Bharath",1234);
+		empNamesLinkedHashMap.put("John",1234);// Adding duplicate value
+		empNamesLinkedHashMap.put("Sony",1236);
+		empNamesLinkedHashMap.put("Bharath",1237); // Adding duplicate key
+		empNamesLinkedHashMap.put("Sarath",1238);
+		empNamesLinkedHashMap.put("Tom",null); // Adding null value
+		empNamesLinkedHashMap.put(null,1239); // Adding null key
+		empNamesLinkedHashMap.remove("Sony"); // Removing a value
+		
+		System.out.println("Size of LinkedHashMap: " + empNamesLinkedHashMap.size()); // Getting the size of LinkedHashMap
+		System.out.println("All elements in LinkedHashMap: " + empNamesLinkedHashMap); // Printing all elements in LinkedHashMap
+		
+		/************************  TreeMap  *************************/
+		
+		System.out.println("************************  TreeMap  *************************");			
+		
+		// Syntax to Initialize an TreeMap:  Map<Key, Value> variable = new TreeMap<Key, Value>();  
+		// Syntax to add data: variable.put(key,value);
+		// Syntax to remove data: variable.remove(key);
+		// Syntax to get data: variable.get(key);
+		// Syntax to get size: variable.size();
+		
+		// TreeMap follow Insertion order of Keys
+		// TreeMap won't allows duplicate Keys, but allows duplicate Values
+		// TreeMap will allow null values But it won't allow null keys
+		
+		Map<String, Integer> empNamesTreeMap = new TreeMap<String,Integer>();
+		empNamesTreeMap.put("Bharath",1234);
+		empNamesTreeMap.put("John",1234);// Adding duplicate value
+		empNamesTreeMap.put("Sony",1236);
+		empNamesTreeMap.put("Bharath",1237); // Adding duplicate key
+		empNamesTreeMap.put("Sarath",1238);
+		empNamesTreeMap.put("Tom",null); // Adding null value
+//		empNamesTreeMap.put(null,1239); // Adding null key
+		empNamesTreeMap.remove("Sony"); // Removing a value
+		
+		System.out.println("Size of TreeMap: " + empNamesTreeMap.size()); // Getting the size of TreeMap
+		System.out.println("All elements in TreeMap: " + empNamesTreeMap); // Printing all elements in TreeMap
+		
+		/************************  Hashtable  *************************/
+		
+		System.out.println("************************  Hashtable  *************************");			
+		
+		// Syntax to Initialize an Hashtable:  Map<Key, Value> variable = new Hashtable<Key, Value>();  
+		// Syntax to add data: variable.put(key,value);
+		// Syntax to remove data: variable.remove(key);
+		// Syntax to get data: variable.get(key);
+		// Syntax to get size: variable.size();
+		
+		// Hashtable follow Random order of Keys
+		// Hashtable won't allows duplicate Keys, but allows duplicate Values
+		// Hashtable won't allow null values and null keys
+		
+		Map<String, Integer> empNamesHashtable = new Hashtable<String,Integer>();
+		empNamesHashtable.put("Bharath",1234);
+		empNamesHashtable.put("John",1234);// Adding duplicate value
+		empNamesHashtable.put("Sony",1236);
+		empNamesHashtable.put("Bharath",1237); // Adding duplicate key
+		empNamesHashtable.put("Sarath",1238);
+//		empNamesHashtable.put("Tom",null); // Adding null value
+//		empNamesHashtable.put(null,1239); // Adding null key
+		empNamesHashtable.remove("Sony"); // Removing a value
+		
+		System.out.println("Size of Hashtable: " + empNamesHashtable.size()); // Getting the size of Hashtable
+		System.out.println("All elements in Hashtable: " + empNamesHashtable); // Printing all elements in Hashtable
 		
 		
 		}

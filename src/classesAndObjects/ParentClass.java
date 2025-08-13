@@ -1,6 +1,6 @@
 package classesAndObjects;
 
-public class ParentClass {
+public class ParentClass{
 	
 	//emp id is integer
 	int empId = 1234;
