@@ -10,7 +10,7 @@ public class ConditionalStatements {
 	public static void main(String[] args) {
 
 		// Example of if-else conditional statement
-		boolean isCoolieMovieAvailable = true;
+		boolean isCoolieMovieAvailable = false;
 		boolean isWar2MovieAvailable = false;
 		boolean isKhadgamMovieAvailable = true;
 		
@@ -41,7 +41,80 @@ public class ConditionalStatements {
 		} else {
 			System.out.println("No Ticket Available, Go Home");
 		}
+		
+		
+		//Example switch case Conditional statement
+		
+/*		switch(input) {
+		
+		case input1:
+			Code to execute if input is equal to input1;
+			break;
+			
+		case input2:
+			Code to execute if input is equal to input2;
+			break;
+				
+		case input3:
+			Code to execute if input is equal to input3;
+			break;
+					
+		default:
+			Code to execute if input does not match any of the cases;
+			break;*/
+		
+		String day = "Sunday";
+		
+		String output = "";
+		
+		switch (day) {
+			case "Monday":
+				System.out.println("WeekDay");
+				output = "WeekDay";
+				break;
+			case "Tuesday":
+				System.out.println("WeekDay");
+				output = "WeekDay";
 
+				break;
+			case "Wednesday":
+				System.out.println("WeekDay");
+				output = "WeekDay";
+
+				break;
+			case "Thursday":
+				System.out.println("WeekDay");
+				output = "WeekDay";
+
+				break;
+			case "Friday":
+				System.out.println("WeekDay");
+				output = "WeekDay";
+
+				break;
+			case "Saturday":
+				System.out.println("Weekend");
+				output = "Weekend";
+
+				break;
+			case "Sunday":
+				System.out.println("Weekend");
+				output = "Weekend";
+
+				break;
+			default:
+				System.out.println("Invalid day");
+						
+		}
+		
+		//Switch case expression with String (Java 14+)
+		String Output = switch (day) {
+		case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> "WeekDay";
+		case "Saturday", "Sunday" -> "Weekend";
+		default -> "Invalid day";
+		};
 	}
+	
+	
 
 }
