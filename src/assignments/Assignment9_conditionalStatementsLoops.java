@@ -33,12 +33,12 @@ public class Assignment9_conditionalStatementsLoops {
             double hikePercentage = calculateHike(data[0], data[1], data[2]); // call common method
             hikeMap.put(emp, hikePercentage);
         }
-
-        // Print hike details
-        System.out.println("Employee Hike Details:");
-        for (Map.Entry<String, Double> entry : hikeMap.entrySet()) {
-            System.out.printf("%s -> %.2f%%\n", entry.getKey(), entry.getValue());
+        
+        System.out.println("Hike Percentage for each employee:");
+        for(String emp : employees) {
+        	System.out.println(emp + ": " + hikeMap.get(emp) + "%");
         }
+      
     }
 
     /**
