@@ -6,7 +6,7 @@ public class Assignment13_PowerOfN {
 
 		// Base value (x) and exponent (n) are initialized
 		double x = 10;  // Base number
-		int n = 3;     // Exponent (can be positive, negative, or zero)
+		int n = -2;     // Exponent (can be positive, negative, or zero)
 		double result = 1;  // Variable to store the final result of x^n
 
 		// Case when exponent is 0: x^0 is always 1 (regardless of the base, except when x is 0)
