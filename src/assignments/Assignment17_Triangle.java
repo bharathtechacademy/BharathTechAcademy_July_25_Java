@@ -1,6 +1,8 @@
 package assignments;
 
 public class Assignment17_Triangle {
+	
+	//Printing triangle pattern
 
 	public static void main(String[] args) {
 		
